@@ -1,0 +1,31 @@
+// FONTS
+$font: "Public Sans", sans-serif;
+
+// COLOURS
+
+// Primary
+$dark-blue: #2d314d;
+$lime-green: #31d35c;
+$bright-cyan: #2bb7da;
+
+// Neutral
+$gray-blue: #9698a6;
+$light-gray-blue: #f3f4f6;
+$very-light-gray: #fafafa;
+$white: #ffffff;
+
+// Breakpoints
+$breakpoints: (
+  // Phones
+    small: 37.5rem,
+  // Tablet
+    medium: 76.8rem
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}

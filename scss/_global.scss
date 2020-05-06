@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-body;
+  background: $intro-bg;
+  color: $white;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 7.3rem 6rem 8.7rem 6rem;
+  overflow: hidden;
+
+  @include breakpoint(small) {
+    padding: 25px 20px 100px 20px;
+  }
+}

@@ -7,6 +7,8 @@
   padding: 1.9rem 16.4rem;
   background: $white;
   height: 8rem;
+  position: relative;
+  z-index: 1000;
 
   @include breakpoint(medium) {
     padding: 5.6rem 2.5rem;

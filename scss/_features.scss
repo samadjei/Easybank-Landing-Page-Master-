@@ -1,0 +1,36 @@
+.features {
+  &__intro {
+    max-width: 62rem;
+    h2 {
+      font-size: 4.1rem;
+      font-weight: 300;
+      color: $dark-blue;
+    }
+
+    p {
+      color: $gray-blue;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    &--content {
+      img {
+        padding-bottom: 4.4rem;
+      }
+      h4 {
+        font-weight: 300;
+        font-size: 2.7rem;
+        color: $dark-blue;
+        padding-bottom: 3.3rem;
+      }
+
+      p {
+        font-size: 1.68rem;
+      }
+    }
+  }
+}

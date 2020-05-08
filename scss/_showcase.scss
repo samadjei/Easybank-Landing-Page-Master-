@@ -2,7 +2,6 @@
   height: 100%;
   padding: 180px 0 170px;
   position: relative;
-  // background: var(--light-grey);
   background-position: 630px -280px;
   background-size: auto;
 
@@ -10,8 +9,7 @@
     max-width: 43.5rem;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: start;
+    align-items: start;
 
     h1,
     p {
@@ -20,12 +18,10 @@
     h1 {
       font-size: 5.5rem;
       font-weight: 300;
-      color: $dark-blue;
     }
 
     p {
       font-size: 1.7rem;
-      color: $gray-blue;
     }
   }
 

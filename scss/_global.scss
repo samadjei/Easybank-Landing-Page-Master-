@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: #000;
+  color: $gray-blue;
   text-decoration: none;
 }
 
@@ -32,6 +32,17 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $dark-blue;
+}
+
+p {
+  color: $gray-blue;
 }
 
 .container {

@@ -1,14 +1,16 @@
 // Header
+header {
+  background: $white;
+  position: relative;
+  z-index: 1000;
+}
 .main-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 1.9rem 16.4rem;
-  background: $white;
+  padding: 1.9rem 6.4rem;
   height: 8rem;
-  position: relative;
-  z-index: 1000;
 
   @include breakpoint(medium) {
     padding: 5.6rem 2.5rem;
@@ -30,7 +32,6 @@
     display: flex;
     li a {
       padding: 0 3.3rem;
-      color: $gray-blue;
 
       @include breakpoint(small) {
         padding: 0 1rem;

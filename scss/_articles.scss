@@ -1,0 +1,29 @@
+.articles {
+  .container {
+    padding: 0rem 6rem 8.7rem 6rem;
+  }
+
+  h2 {
+    font-size: 4.1rem;
+    font-weight: 300;
+    padding-bottom: 6rem;
+  }
+}
+
+.grid {
+  &__article {
+    background: $white;
+    img {
+      height: auto;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+    &--content {
+      padding: 3rem 4.2rem 2.4rem 2.6rem;
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

@@ -39,6 +39,14 @@ h2,
 h3,
 h4 {
   color: $dark-blue;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: $gray-blue;
+  padding-bottom: 1.5rem;
 }
 
 p {
@@ -74,4 +82,13 @@ p {
   &:hover {
     transform: translateY(-0.5rem);
   }
+}
+
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-self: center;
+  gap: 3rem;
 }

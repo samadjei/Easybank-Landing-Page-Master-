@@ -3,20 +3,50 @@
   li {
     line-height: 3;
     a {
-      color: $light-gray;
+      color: $light-gray-blue;
     }
   }
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    justify-content: center;
-    align-self: center;
-    gap: 3rem;
+    gap: 3.5rem;
+    grid-template-columns: 2fr repeat(2, 1fr) 2fr 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "socials about-1 about-2 . rights";
+  }
+
+  &__socials {
+    grid-area: socials;
+  }
+
+  &__about-1 {
+    grid-area: about-1;
+  }
+
+  &__about-2 {
+    grid-area: about-2;
+  }
+
+  &__rights {
+    grid-area: rights;
+    text-align: center;
+    a {
+      margin-bottom: 6rem;
+    }
+  }
+
+  .attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .attribution a {
+    color: #3e52a3;
   }
 }
 
 .socials {
   &--icons {
+    padding-top: 6rem;
     display: flex;
     height: 100%;
     li {

@@ -28,9 +28,14 @@
 
   &__rights {
     grid-area: rights;
-    text-align: center;
+    text-align: right;
+    width: 25rem;
     a {
       margin-bottom: 6rem;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
   }
 
@@ -42,6 +47,10 @@
   .attribution a {
     color: #3e52a3;
   }
+}
+
+.logos {
+  filter: invert(85.7%) sepia(29.2%) saturate(185.1%) hue-rotate(183.7deg) brightness(100%) contrast(181.3%);
 }
 
 .socials {

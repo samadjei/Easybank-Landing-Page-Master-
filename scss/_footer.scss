@@ -4,6 +4,9 @@
     line-height: 3;
     a {
       color: $light-gray-blue;
+      &:hover {
+        color: $lime-green;
+      }
     }
   }
   &__grid {
@@ -58,8 +61,11 @@
     padding-top: 6rem;
     display: flex;
     height: 100%;
-    li {
+    li a {
       padding-right: 1rem;
+      &:hover {
+        filter: invert(59.9%) sepia(328%) saturate(500%) hue-rotate(94.2deg) brightness(166.5%) contrast(155%);
+      }
     }
   }
 }

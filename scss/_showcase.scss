@@ -1,16 +1,16 @@
 .showcase {
-  height: 100%;
-  padding: 180px 0 170px;
+  height: 65.8rem;
+  width: 100%;
   position: relative;
-  background-position: 630px -280px;
-  background-size: auto;
   overflow: hidden;
+  background: $white;
 
   &__text {
     max-width: 43.5rem;
     display: flex;
     flex-direction: column;
     align-items: start;
+    padding-top: 5rem;
 
     h1,
     p {

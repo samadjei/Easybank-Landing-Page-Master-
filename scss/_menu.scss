@@ -29,20 +29,22 @@ header {
         padding: 0 1rem;
       }
 
-      &::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0.3rem;
-        transform: translateY(2.25rem);
-        background: linear-gradient(to right, $lime-green, $bright-cyan);
-        transition: width 0.3s;
-      }
-
-      &:hover {
-        color: $dark-blue;
+      @media screen and (min-width: 768px) {
         &::after {
-          width: 100%;
+          content: "";
+          display: block;
+          width: 0;
+          height: 0.3rem;
+          transform: translateY(2.25rem);
+          background: linear-gradient(to right, $lime-green, $bright-cyan);
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: $dark-blue;
+          &::after {
+            width: 100%;
+          }
         }
       }
 

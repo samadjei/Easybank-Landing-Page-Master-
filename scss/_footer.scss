@@ -1,5 +1,9 @@
 .footer {
   background: $dark-blue;
+
+  .container {
+    color: red;
+  }
   li {
     line-height: 3;
     a {
@@ -13,12 +17,31 @@
     display: grid;
     gap: 3.5rem;
     grid-template-columns: 2fr repeat(2, 1fr) 2fr 1fr;
-    grid-template-rows: 60px 1fr;
+    grid-auto-rows: auto;
     grid-template-areas: "socials about-1 about-2 . rights";
+    @include breakpoint(small) {
+      grid-row-gap: 3.5rem;
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "about-1" "about-2" "rights";
+    }
   }
 
   &__socials {
     grid-area: socials;
+    .socials--icons {
+      padding-top: 6rem;
+      display: flex;
+      height: 100%;
+      cursor: pointer;
+      li img {
+        max-width: 100%;
+        padding-right: 1rem;
+        &:hover {
+          filter: invert(59.9%) sepia(328%) saturate(500%) hue-rotate(94.2deg) brightness(166.5%) contrast(155%);
+        }
+      }
+    }
   }
 
   &__about-1 {
@@ -54,18 +77,4 @@
 
 .logos {
   filter: invert(85.7%) sepia(29.2%) saturate(185.1%) hue-rotate(183.7deg) brightness(100%) contrast(181.3%);
-}
-
-.socials {
-  &--icons {
-    padding-top: 6rem;
-    display: flex;
-    height: 100%;
-    li a {
-      padding-right: 1rem;
-      &:hover {
-        filter: invert(59.9%) sepia(328%) saturate(500%) hue-rotate(94.2deg) brightness(166.5%) contrast(155%);
-      }
-    }
-  }
 }

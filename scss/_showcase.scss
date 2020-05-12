@@ -4,13 +4,13 @@
   position: relative;
   background-position: 630px -280px;
   background-size: auto;
+  overflow: hidden;
 
   &__text {
     max-width: 43.5rem;
     display: flex;
     flex-direction: column;
     align-items: start;
-
 
     h1,
     p {

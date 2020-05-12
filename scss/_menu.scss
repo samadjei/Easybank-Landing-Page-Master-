@@ -6,7 +6,6 @@ header {
 }
 .main-nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1.9rem 6.4rem;
@@ -18,14 +17,6 @@ header {
 
   img {
     width: 14.1rem;
-
-    @include breakpoint(medium) {
-      width: 13.5rem;
-    }
-
-    @include breakpoint(small) {
-      width: 8.5rem;
-    }
   }
 
   .menu {
@@ -34,6 +25,9 @@ header {
       display: block;
       padding: 0 3.3rem;
       transition: all 0.3s ease-out;
+      @include breakpoint(medium) {
+        padding: 0 1rem;
+      }
 
       &::after {
         content: "";
@@ -56,5 +50,79 @@ header {
         padding: 0 1rem;
       }
     }
+  }
+}
+
+@include breakpoint(medium) {
+  .cta {
+    padding: 0.9rem 2.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger div {
+    width: 2.5rem;
+    height: 3px;
+    margin: 5px;
+    transition: 0.3s ease;
+    background: $gray-blue;
+  }
+
+  header {
+    position: relative;
+    background-color: $white;
+  }
+
+  // positioning the hamburger
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 15%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  // Hamburger animation
+  .toggle .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line-2 {
+    opacity: 0;
+  }
+
+  .toggle .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .menu {
+    position: absolute;
+    background: $white;
+    flex-direction: column;
+    top: 120%;
+    left: 15%;
+    text-align: center;
+    width: 75%;
+    border-radius: 0.5rem;
+    clip-path: circle(100px at 90% -60%);
+    -webkit-clip-path: circle(100px at 90% -60%);
+    transition: all 0.5s ease-out;
+    z-index: 2;
+
+    li a {
+      color: $dark-blue;
+      font-weight: 300;
+      line-height: 3;
+    }
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu.open {
+    clip-path: circle(1000px at 90% -60%);
+    -webkit-clip-path: circle(1000px at 90% -60%);
   }
 }

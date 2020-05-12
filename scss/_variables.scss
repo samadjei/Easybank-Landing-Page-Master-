@@ -17,9 +17,13 @@ $white: #ffffff;
 // Breakpoints
 $breakpoints: (
   // Phones
-    small: 37.5rem,
+    small: 499rem,
   // Tablet
-    medium: 76.8rem
+    medium: 899rem,
+  // Large
+    large: 99.9rem,
+  // Desktop
+    xlarge: 139.9rem
 );
 
 @mixin breakpoint($size) {

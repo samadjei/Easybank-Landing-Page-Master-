@@ -2,15 +2,24 @@
   height: 65.8rem;
   width: 100%;
   position: relative;
-  overflow: hidden;
   background: $white;
 
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   &__text {
-    max-width: 43.5rem;
     display: flex;
     flex-direction: column;
     align-items: start;
     padding-top: 5rem;
+    padding-right: 10rem;
+    @include breakpoint(medium) {
+      padding-top: 1rem;
+      grid-row: 2 / 3;
+      padding-left: 3rem;
+    }
 
     h1,
     p {
@@ -19,17 +28,20 @@
     h1 {
       font-size: 5.5rem;
       font-weight: 300;
+      @include breakpoint(medium) {
+        font-size: 3rem;
+      }
     }
 
     p {
       font-size: 1.7rem;
+      padding-right: 10rem;
     }
   }
-
   .mockups {
     position: absolute;
-    top: -12rem;
-    left: 57%;
+    top: 10rem;
+    left: 17%;
   }
 }
 
@@ -38,5 +50,4 @@
   top: -260px;
   right: 100px;
   width: 50%;
-  max-height: 800px;
 }

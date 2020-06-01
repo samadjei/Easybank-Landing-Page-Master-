@@ -1,5 +1,6 @@
 .footer {
   background: $dark-blue;
+  padding: 1rem 7rem;
 
   .container {
     color: red;
@@ -16,57 +17,71 @@
   &__grid {
     display: grid;
     gap: 3.5rem;
-    grid-template-columns: 2fr repeat(2, 1fr) 2fr 1fr;
-    grid-auto-rows: auto;
-    grid-template-areas: "socials about-1 about-2 . rights";
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "socials contact terms conditions cta";
+
     @include breakpoint(small) {
-      grid-row-gap: 3.5rem;
+      grid-row-gap: 35px;
       grid-column-gap: 0px;
       grid-template-columns: 1fr;
-      grid-template-areas: "logo" "about-1" "about-2" "rights";
+      grid-template-areas: "socials" "contact" "terms" "conditions" "cta";
+      align-items: center;
     }
   }
 
   &__socials {
+    display: flex;
+    flex-direction: column;
+    .logo {
+      padding-bottom: 8rem;
+    }
+  }
+
+  // Grid Area
+  &__socials {
     grid-area: socials;
-    .socials--icons {
-      padding-top: 6rem;
-      display: flex;
-      height: 100%;
-      cursor: pointer;
-      li img {
-        max-width: 100%;
-        padding-right: 1rem;
-        &:hover {
-          filter: invert(59.9%) sepia(328%) saturate(500%) hue-rotate(94.2deg) brightness(166.5%) contrast(155%);
-        }
-      }
+    @include breakpoint(small) {
+      justify-self: center;
     }
   }
 
   &__about-1 {
-    grid-area: about-1;
+    grid-area: contact;
+    @include breakpoint(small) {
+      justify-self: center;
+    }
   }
 
   &__about-2 {
-    grid-area: about-2;
+    grid-area: terms;
+    @include breakpoint(small) {
+      justify-self: center;
+    }
   }
 
   &__rights {
-    grid-area: rights;
-    text-align: right;
-    width: 25rem;
-    a {
-      margin-bottom: 6rem;
-    }
+    grid-area: cta;
+  }
+
+  &__rights {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
     p {
       font-size: 1.5rem;
+      padding-top: 8rem;
     }
   }
 }
-
-.logos {
-  grid-area: logo;
-  filter: invert(85.7%) sepia(29.2%) saturate(185.1%) hue-rotate(183.7deg) brightness(100%) contrast(181.3%);
+.socials--icons {
+  display: flex;
+  li img {
+    padding-right: 1rem;
+    cursor: pointer;
+    &:hover {
+      filter: invert(59.9%) sepia(328%) saturate(500%) hue-rotate(94.2deg) brightness(166.5%) contrast(155%);
+    }
+  }
 }

@@ -3,9 +3,11 @@
   @include breakpoint(medium) {
     text-align: center;
   }
-  .container {
-    // padding: 0rem 6rem 8.7rem 6rem;
+
+  @include breakpoint(small) {
+    margin-top: 5rem;
   }
+
   &__intro {
     max-width: 62rem;
     padding-bottom: 8rem;

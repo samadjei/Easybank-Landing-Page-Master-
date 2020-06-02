@@ -7,6 +7,12 @@
     font-size: 4.1rem;
     font-weight: 300;
     padding-bottom: 6rem;
+
+    @include breakpoint(medium) {
+      text-align: center;
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
   }
 }
 

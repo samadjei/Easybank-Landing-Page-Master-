@@ -1,89 +1,98 @@
 .footer {
   background: $dark-blue;
-  padding: 1rem 7rem;
-
-  .container {
-    color: red;
-  }
-  li {
-    line-height: 3;
-    a {
-      color: $light-gray-blue;
-      &:hover {
-        color: $lime-green;
-      }
-    }
-  }
   &__grid {
     display: grid;
     gap: 3.5rem;
-    grid-template-columns: 3fr 2fr 2fr 2fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: "socials contact terms conditions cta";
+    grid-template-columns: repeat(3, 1fr) 1fr 1fr;
+    grid-template-areas: "socials about careers . copyright";
+    justify-items: center;
+    align-items: start;
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "socials about careers copyright";
+    }
 
     @include breakpoint(small) {
-      grid-row-gap: 35px;
-      grid-column-gap: 0px;
+      padding-top: 5rem;
+      gap: 0;
       grid-template-columns: 1fr;
-      grid-template-areas: "socials" "contact" "terms" "conditions" "cta";
-      align-items: center;
+      grid-template-areas: "socials" "about" "careers" "copyright";
     }
   }
 
-  &__socials {
+  &__copyright {
     display: flex;
     flex-direction: column;
-    .logo {
-      padding-bottom: 8rem;
-    }
-  }
+    grid-area: copyright;
+    height: 100%;
 
-  // Grid Area
-  &__socials {
-    grid-area: socials;
-    @include breakpoint(small) {
-      justify-self: center;
-    }
-  }
-
-  &__about-1 {
-    grid-area: contact;
-    @include breakpoint(small) {
-      justify-self: center;
-    }
-  }
-
-  &__about-2 {
-    grid-area: terms;
-    @include breakpoint(small) {
-      justify-self: center;
-    }
-  }
-
-  &__rights {
-    grid-area: cta;
-  }
-
-  &__rights {
-    display: flex;
-    flex-direction: column;
-
-    .cta {
+    div {
       margin-bottom: auto;
+      @include breakpoint(small) {
+        padding-bottom: 2rem;
+      }
     }
-    
+
     p {
       font-size: 1.5rem;
     }
+
+    @include breakpoint(small) {
+      padding-top: 3rem;
+    }
   }
-}
-.socials--icons {
-  display: flex;
-  li img {
-    padding-right: 1rem;
-    cursor: pointer;
+
+  // *Social
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    grid-area: socials;
+    height: 100%;
+    svg {
+      margin-bottom: auto;
+    }
+
+    @include breakpoint(small) {
+      padding-bottom: 2rem;
+    }
+
+    &--icons {
+      display: flex;
+      @include breakpoint(small) {
+        padding-top: 3rem;
+      }
+      li svg path:hover {
+        fill: $lime-green;
+        cursor: pointer;
+      }
+      li:not(:first-child) {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  &__about {
+    grid-area: about;
+    @include breakpoint(small) {
+      justify-self: center;
+    }
+  }
+
+  &__careers {
+    grid-area: careers;
+  }
+
+  .col li {
+    color: $very-light-gray;
+    text-align: center;
+
+    &:not(:first-child) {
+      line-height: 2;
+    }
     &:hover {
-      filter: invert(59.9%) sepia(328%) saturate(500%) hue-rotate(94.2deg) brightness(166.5%) contrast(155%);
+      color: $lime-green;
+      cursor: pointer;
     }
   }
 }

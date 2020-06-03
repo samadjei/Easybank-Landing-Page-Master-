@@ -64,11 +64,20 @@
   }
 }
 
-.img {
+.img img {
   max-width: 100%;
   margin-top: -25rem;
+  margin-left: 0;
+  @include breakpoint(large) {
+    margin-left: 20rem;
+  }
+
+  @include breakpoint(medium) {
+    margin-left: 0;
+  }
 
   @include breakpoint(small) {
     margin-top: -13rem;
+    margin-left: 0;
   }
 }
